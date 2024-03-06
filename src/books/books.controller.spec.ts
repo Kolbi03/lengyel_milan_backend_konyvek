@@ -1,7 +1,5 @@
 import { Test, TestingModule } from '@nestjs/testing';
-import { BooksController } from './books.controller';
 import { BooksService } from './books.service';
-import { Book } from './books.model';
 import { NotFoundException } from '@nestjs/common';
 
 describe('BooksService', () => {
