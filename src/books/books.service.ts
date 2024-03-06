@@ -28,12 +28,13 @@ export class BooksService {
     return this.books.find((book) => book.id === id);
   }
 
-  public createBook(bookInput: BookInput) {
-    const book: Book = {
+  createBook(bookInput: BookInput) {
+    const newBook: Book = {
       id: Math.random().toString(),
       ...bookInput,
     };
-    this.books.push(book);
+    this.books.push(newBook);
+    return newBook;
   }
 
   deleteBook(id: string) {
